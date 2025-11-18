@@ -1,7 +1,6 @@
 # better_Toone
-4 raws by EsDeeKid while I do this lmfao
-I am going to prove that I can build the backend better than these mansplaining mfs
-Also written with buns internet 
+A program that connects to your spotify and gives you a movie based on your recently listened.
+I formally apologize to whoever read the original README. 
 
 To run:
 Make sure you have a .env file with your own Spotify API key 
