@@ -7,7 +7,7 @@ BASE_URL = "https://tastedive.com/api/similar"
 def search_tastedive(query, media_type):
     """
     Query TasteDive for a given search term and type.
-    media_type can be: 'music', 'movies', 'shows', 'books', 'authors', etc.
+    media_type can be: 'music', 'movie', 'show', 'book', 'author', etc.
     """
     params = {
         "q": query,  # use the plain string, requests will handle encoding

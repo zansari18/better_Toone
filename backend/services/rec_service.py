@@ -46,7 +46,7 @@ class RecommendationService:
         """
         query = f"{track.name} {track.artist}".strip()[:100]  # optional length limit
         # DO NOT urlencode manually
-        data = search_tastedive(query, "movies")
+        data = search_tastedive(query, "movie")
         return data.get("Similar", {}).get("Results", [])
 
     # -----------------------------
