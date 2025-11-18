@@ -43,9 +43,9 @@ class RecommendationService:
     def _get_tastedive_movies(self, track: SpotifyTrack):
         """
         Query TasteDive for movie recommendations based on a SpotifyTrack.
-        Automatically sanitizes the query to prevent 400 errors.
         """
         query = f"{track.name} {track.artist}".strip()[:100]  # optional length limit
+        # DO NOT urlencode manually
         data = search_tastedive(query, "movies")
         return data.get("Similar", {}).get("Results", [])
 
