@@ -1,10 +1,12 @@
-# clients/spotify_client.py
 from dotenv import load_dotenv
+from pathlib import Path
 import os
 import requests
 from urllib.parse import urlencode
 
-load_dotenv()  # load environment variables from .env
+# Load .env from repo root
+env_path = Path(__file__).resolve().parent.parent.parent / ".env"
+load_dotenv(dotenv_path=env_path)
 
 class SpotifyClient:
     AUTH_URL = "https://accounts.spotify.com/authorize"
