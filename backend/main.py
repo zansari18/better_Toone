@@ -6,6 +6,7 @@ def main():
     service = RecommendationService()
     recommendations = service.recommend_movies(token)
 
+    
     for rec in recommendations:
         print("\n🎬 Movie Recommendation:")
         print("Based on Song:   ", rec.based_on_song)

@@ -47,6 +47,8 @@ class RecommendationService:
         query = f"{track.name} {track.artist}".strip()[:100]  # optional length limit
         # DO NOT urlencode manually
         data = search_tastedive(query, "movie")
+        print("QUERY:", query)
+        print("TasteDive Response:", data)
         return data.get("Similar", {}).get("Results", [])
 
     # -----------------------------
@@ -71,12 +73,14 @@ class RecommendationService:
     def recommend_movies(self, access_token):
         tracks = self._get_recent_tracks(access_token)
         recommendations = []
-
+        print("TRACKS FOUND:", [ (t.name, t.artist) for t in tracks ])
         for track in tracks:
             td_results = self._get_tastedive_movies(track)
-
             for entry in td_results:
                 movie_title = entry.get("Name")
+                print("TasteDive entry:", entry)
+                print("Movie title:", movie_title)
+
                 if not movie_title:
                     continue
 
