@@ -26,7 +26,7 @@ def callback():
     token_data = client.get_token(code)
     access_token = token_data.get("access_token")
     if access_token:
-        return f"<h1>Success! ✅</h1><p>Your token is printed in the console.</p>"
+        return f"<h1>Success!</h1><p>Your token is printed in the console.</p>"
     return "Error: could not get access token"
 
 # ---------------------------

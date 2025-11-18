@@ -8,7 +8,7 @@ def main():
 
     
     for rec in recommendations:
-        print("\n🎬 Movie Recommendation:")
+        print("\n Movie Recommendation:")
         print("Based on Song:   ", rec.based_on_song)
         print("Artist:          ", rec.based_on_artist)
         print("Movie:           ", rec.movie_title)
